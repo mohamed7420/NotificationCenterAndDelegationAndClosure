@@ -1,24 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1oy-vF-8XY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Select Time View Controller-->
+        <scene sceneID="1jb-6L-Pqb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="3n1-Qh-Y34" customClass="SelectTimeViewController" customModule="NotificationCenterAndDelegationAndClosure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Of-Ts-0qt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nej-xI-lwD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8De-Xn-kSj">
+                                        <rect key="frame" x="103.5" y="371.5" width="207" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-UH-QuA">
+                                        <rect key="frame" x="15" y="20" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-T0-CfY">
+                                        <rect key="frame" x="318" y="15.5" width="81" height="30"/>
+                                        <state key="normal" title="Select Time"/>
+                                        <connections>
+                                            <segue destination="OzH-qk-8JI" kind="show" identifier="selectTimeSegue" id="LCA-gB-r5z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MLS-T0-CfY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eEO-UH-QuA" secondAttribute="trailing" constant="8" symbolic="YES" id="33Q-yZ-sY5"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLS-T0-CfY" secondAttribute="trailing" constant="15" id="BEK-uC-2a1"/>
+                                    <constraint firstItem="eEO-UH-QuA" firstAttribute="top" secondItem="nej-xI-lwD" secondAttribute="top" constant="20" id="McA-pQ-jOh"/>
+                                    <constraint firstItem="MLS-T0-CfY" firstAttribute="centerY" secondItem="eEO-UH-QuA" secondAttribute="centerY" id="NXu-JH-Twa"/>
+                                    <constraint firstItem="8De-Xn-kSj" firstAttribute="centerX" secondItem="nej-xI-lwD" secondAttribute="centerX" id="O7V-sw-PH3"/>
+                                    <constraint firstItem="eEO-UH-QuA" firstAttribute="leading" secondItem="nej-xI-lwD" secondAttribute="leading" constant="15" id="OV6-Gb-fPy"/>
+                                    <constraint firstItem="8De-Xn-kSj" firstAttribute="centerY" secondItem="nej-xI-lwD" secondAttribute="centerY" id="QNT-JT-3Ka"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nej-xI-lwD" firstAttribute="trailing" secondItem="rcs-Ck-hFl" secondAttribute="trailing" id="DeC-yw-uCs"/>
+                            <constraint firstItem="nej-xI-lwD" firstAttribute="bottom" secondItem="rcs-Ck-hFl" secondAttribute="bottom" id="WyA-Fa-6S6"/>
+                            <constraint firstItem="nej-xI-lwD" firstAttribute="leading" secondItem="rcs-Ck-hFl" secondAttribute="leading" id="lPh-RT-mSa"/>
+                            <constraint firstItem="nej-xI-lwD" firstAttribute="top" secondItem="rcs-Ck-hFl" secondAttribute="top" id="v26-dy-OJi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rcs-Ck-hFl"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="998-ui-A9V"/>
+                    <connections>
+                        <outlet property="labelSelectTime" destination="eEO-UH-QuA" id="1e9-rW-m4f"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXM-kZ-Lii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="450.72463768115944" y="311.38392857142856"/>
+        </scene>
+        <!--SelectTimeStoryboard-->
+        <scene sceneID="AQj-GH-feZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectTimeStoryboard" id="yfr-mo-bvz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4rz-n1-vH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="270"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zh1-HO-hIz">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="8Cc-mD-X6s" customClass="ViewController" customModule="NotificationCenterAndDelegationAndClosure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HU0-0K-ocQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOu-nM-b1W">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMB-ei-z0e">
+                                        <rect key="frame" x="10" y="20" width="89" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5f-6V-Z3Q">
+                                        <rect key="frame" x="300" y="13" width="99" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Select Date">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OzH-qk-8JI" kind="show" identifier="selectDateSegue" id="YWM-hj-Rwf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-Rk-jgP">
+                                        <rect key="frame" x="107" y="371.5" width="200.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="O5f-6V-Z3Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VMB-ei-z0e" secondAttribute="trailing" constant="8" symbolic="YES" id="QaP-z0-JMO"/>
+                                    <constraint firstItem="1iU-Rk-jgP" firstAttribute="centerY" secondItem="MOu-nM-b1W" secondAttribute="centerY" id="YIu-oG-QJ8"/>
+                                    <constraint firstItem="O5f-6V-Z3Q" firstAttribute="centerY" secondItem="VMB-ei-z0e" secondAttribute="centerY" id="f2W-ek-NJM"/>
+                                    <constraint firstItem="1iU-Rk-jgP" firstAttribute="centerX" secondItem="MOu-nM-b1W" secondAttribute="centerX" id="nsm-J9-PQt"/>
+                                    <constraint firstItem="VMB-ei-z0e" firstAttribute="leading" secondItem="MOu-nM-b1W" secondAttribute="leading" constant="10" id="oWS-eW-MSy"/>
+                                    <constraint firstItem="VMB-ei-z0e" firstAttribute="top" secondItem="MOu-nM-b1W" secondAttribute="top" constant="20" id="ucR-iL-gRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="O5f-6V-Z3Q" secondAttribute="trailing" constant="15" id="zTw-WK-eQg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MOu-nM-b1W" firstAttribute="top" secondItem="XC3-RZ-HhD" secondAttribute="top" id="DTY-CE-abY"/>
+                            <constraint firstItem="MOu-nM-b1W" firstAttribute="leading" secondItem="XC3-RZ-HhD" secondAttribute="leading" id="UiV-SV-Ppm"/>
+                            <constraint firstItem="MOu-nM-b1W" firstAttribute="trailing" secondItem="XC3-RZ-HhD" secondAttribute="trailing" id="kqb-1j-dz0"/>
+                            <constraint firstItem="MOu-nM-b1W" firstAttribute="bottom" secondItem="XC3-RZ-HhD" secondAttribute="bottom" id="onC-9e-R6C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XC3-RZ-HhD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="FRy-qt-2hD"/>
+                    <connections>
+                        <outlet property="labelSelectDate" destination="VMB-ei-z0e" id="rbn-cK-PDb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osp-1c-Hux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450.72463768115944" y="-336.16071428571428"/>
+        </scene>
+        <!--SelectDateStoryboard-->
+        <scene sceneID="B3x-ma-w7U">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectDateStoryboard" id="OzH-qk-8JI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FFM-iI-Ga0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPF-AD-rNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="-330"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LXB-nC-ZIs">
+            <objects>
+                <tabBarController id="1oy-vF-8XY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5WT-l0-UuF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8Cc-mD-X6s" kind="relationship" relationship="viewControllers" id="e5f-SV-QUD"/>
+                        <segue destination="3n1-Qh-Y34" kind="relationship" relationship="viewControllers" id="np5-Ms-Zqe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtM-Rf-gqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="-12"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LCA-gB-r5z"/>
+    </inferredMetricsTieBreakers>
 </document>

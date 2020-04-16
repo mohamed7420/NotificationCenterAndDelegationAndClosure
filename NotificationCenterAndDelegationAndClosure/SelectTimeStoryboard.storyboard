@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rQt-by-A0p">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Time View Controller-->
+        <scene sceneID="W1e-zw-Mz4">
+            <objects>
+                <viewController storyboardIdentifier="SelectTimeViewController" modalPresentationStyle="overCurrentContext" id="rQt-by-A0p" customClass="SelectTimeViewController" customModule="NotificationCenterAndDelegationAndClosure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rC-b4-Qyr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPr-Pp-yuh">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-ui-5Av">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-xd-dFe">
+                                                <rect key="frame" x="105" y="14.5" width="90.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="aEz-xd-dFe" firstAttribute="centerX" secondItem="tOf-ui-5Av" secondAttribute="centerX" id="2jm-cG-E5f"/>
+                                            <constraint firstAttribute="height" constant="50" id="the-hx-NI6"/>
+                                            <constraint firstItem="aEz-xd-dFe" firstAttribute="centerY" secondItem="tOf-ui-5Av" secondAttribute="centerY" id="upT-x4-01U"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiY-lU-ZND">
+                                        <rect key="frame" x="0.0" y="250" width="300" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MHi-0S-o76"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Save Time">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonSaveTimeTapped:" destination="rQt-by-A0p" eventType="touchUpInside" id="fmI-AP-BVu"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Utt-4o-HiU">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="200"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Utt-4o-HiU" firstAttribute="top" secondItem="tOf-ui-5Av" secondAttribute="bottom" id="2Kp-jv-oeN"/>
+                                    <constraint firstAttribute="bottom" secondItem="kiY-lU-ZND" secondAttribute="bottom" id="4OI-ke-IZq"/>
+                                    <constraint firstAttribute="trailing" secondItem="tOf-ui-5Av" secondAttribute="trailing" id="9AM-ah-aDq"/>
+                                    <constraint firstItem="Utt-4o-HiU" firstAttribute="top" secondItem="tOf-ui-5Av" secondAttribute="bottom" id="OPZ-F9-bI4"/>
+                                    <constraint firstItem="kiY-lU-ZND" firstAttribute="top" secondItem="Utt-4o-HiU" secondAttribute="bottom" id="PLT-31-Lup"/>
+                                    <constraint firstAttribute="width" constant="300" id="RRa-0V-KZ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="kiY-lU-ZND" secondAttribute="trailing" id="XEP-l4-K5B"/>
+                                    <constraint firstAttribute="trailing" secondItem="Utt-4o-HiU" secondAttribute="trailing" id="XwM-5t-8LI"/>
+                                    <constraint firstItem="Utt-4o-HiU" firstAttribute="leading" secondItem="UPr-Pp-yuh" secondAttribute="leading" id="YN1-mO-NQh"/>
+                                    <constraint firstItem="kiY-lU-ZND" firstAttribute="leading" secondItem="UPr-Pp-yuh" secondAttribute="leading" id="aWu-yf-LfI"/>
+                                    <constraint firstItem="Utt-4o-HiU" firstAttribute="leading" secondItem="UPr-Pp-yuh" secondAttribute="leading" id="eP1-qf-k6D"/>
+                                    <constraint firstItem="tOf-ui-5Av" firstAttribute="leading" secondItem="UPr-Pp-yuh" secondAttribute="leading" id="hQj-Ms-I9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Utt-4o-HiU" secondAttribute="trailing" id="jLQ-O1-gem"/>
+                                    <constraint firstAttribute="height" constant="300" id="l69-gx-M51"/>
+                                    <constraint firstItem="kiY-lU-ZND" firstAttribute="top" secondItem="Utt-4o-HiU" secondAttribute="bottom" id="rLf-qz-rLK"/>
+                                    <constraint firstItem="tOf-ui-5Av" firstAttribute="top" secondItem="UPr-Pp-yuh" secondAttribute="top" id="wna-jR-rnr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.076573202054794523" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UPr-Pp-yuh" firstAttribute="centerY" secondItem="4rC-b4-Qyr" secondAttribute="centerY" id="cAm-gl-qVa"/>
+                            <constraint firstItem="UPr-Pp-yuh" firstAttribute="centerX" secondItem="4rC-b4-Qyr" secondAttribute="centerX" id="zQ2-s2-xmW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UDM-rQ-Nuz"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonSaveButton" destination="kiY-lU-ZND" id="j4K-WB-YYD"/>
+                        <outlet property="labelSelectTime" destination="aEz-xd-dFe" id="HHC-Jt-XsG"/>
+                        <outlet property="timePicker" destination="Utt-4o-HiU" id="qU0-ED-mEP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qW-Q0-HQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+</document>
